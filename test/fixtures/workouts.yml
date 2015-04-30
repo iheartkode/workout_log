@@ -4,8 +4,14 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+workout1:
+  area_worked_out: Abs
+  workout_length: 30
+  mood: lazy
+  notes: I was lazy but workedout
+  
+workout2:
+  area_worked_out: Legs
+  workout_length: 45
+  mood: energized
+  notes: I had good energy
