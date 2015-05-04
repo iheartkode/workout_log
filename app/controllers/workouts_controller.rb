@@ -1,5 +1,7 @@
 class WorkoutsController < ApplicationController
+
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
+
   def index
     @workouts = Workout.all.order("created_at desc")
   end
@@ -7,7 +9,6 @@ class WorkoutsController < ApplicationController
   def show
 
   end
-
 
   def new
     @workout = Workout.new
@@ -17,7 +18,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
     if @workout.save
        #flash[:success] = "Workout was successfully created"
-      redirect_to @workout
+      redirect_to root_path
     else
       render 'new'
     end
@@ -31,7 +32,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
     @workout.update(workout_params)
      flash[:success] = "Workout was successfully updated"
-    redirect_to @workout
+    redirect_to root_path
   end
 
  private
