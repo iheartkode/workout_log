@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$( document ).ready(function() {
+    $('#new-workout').on( "click", function() {
+      $('#new').fadeIn(1000);
+    });
+});
