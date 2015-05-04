@@ -1,3 +1,38 @@
-// Place all the styles related to the Workouts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #3BD5F7;
+  text-decoration: underline;
+}
+
+.workout-date {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+}
+
+.area-worked-out {
+  color: #3BD5F7;
+  font-size: 18px;
+
+}
+
+.workout {
+  color: #333;
+  font-weight: bold;
+}
