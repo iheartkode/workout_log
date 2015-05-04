@@ -17,7 +17,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
     if @workout.save
-       #flash[:success] = "Workout was successfully created"
+       flash[:success] = "Workout was successfully created"
       redirect_to root_path
     else
       render 'new'
