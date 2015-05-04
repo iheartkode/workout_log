@@ -7,11 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>Workout Log</h1>
+  </header>
   <div class="container">
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
+    <div class="content">
+      <span class="new-workout"><%= link_to 'New Workout', new_workout_path  %></span>
+      <br><br>
+      <% flash.each do |key, value| %>
+        <div class="alert"<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>

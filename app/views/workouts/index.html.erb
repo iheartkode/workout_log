@@ -1,6 +1,4 @@
-<h1>Workouts:</h1>
-<%= link_to 'Create Workout', new_workout_path  %><br><br>
 <% @workouts.each do |workout| %>
-  <p class="workout-date"><%= link_to localize(workout.created_at, :format => :long), workout %></p>
+  <p class="workout-date"><%= link_to workout.created_at.strftime("%B %d, %Y"), workout %></p>
   <span class="area-worked-out">Workout:</span> <span class="workout"><%= workout.area_worked_out %></span>
 <% end %>
