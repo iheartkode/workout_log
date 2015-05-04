@@ -3,6 +3,7 @@ Area Worked Out: <%= @workout.area_worked_out %><br>
 Workout Length: <%= @workout.workout_length %><br>
 Workout Mood: <%= @workout.mood %><br>
 Workout Notes: <%= @workout.notes %><br>
+<%= link_to "Delete",  workout_path(@workout) , method:  :delete, data: { confirm: "Are you sure?" }%>
 <br><br>
 <%= link_to 'Edit Workout', edit_workout_path %>
 <%= link_to 'Back to Workout List', root_path %>
