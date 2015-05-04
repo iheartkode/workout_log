@@ -1,5 +1,6 @@
 require 'test_helper'
 
+
 class WorkoutsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
@@ -12,7 +13,11 @@ class WorkoutsControllerTest < ActionController::TestCase
     assert_response :success
   end
   
-   
+  test "should show workout" do
+    get :show, id: @workout
+    assert_response :success
+  end
+
   test "should get new" do
     get :new
     assert_response :success
