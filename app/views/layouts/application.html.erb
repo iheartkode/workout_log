@@ -14,7 +14,8 @@
     <div class="content">
       <span id="new-workout" class="new-workout"><%= link_to 'New Workout', '#' %></span>
       <div id="new">
-        <%= render 'form' %>
+        <%= render 'form' %><br>
+        <%= link_to 'Cancel', root_path %>
       </div>
       <br><br>
       <% flash.each do |key, value| %>

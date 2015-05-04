@@ -1,6 +1,6 @@
 <br>
 <span class="form">
-  <%= form_for(Workout.new) do |f| %>
+  <%= form_for :workout do |f| %>
     <%= f.text_field :area_worked_out, :placeholder => 'Area Worked Out' %><br><br>
     <%= f.text_field :workout_length, :placeholder => 'Length of Workout' %><br><br>
     <%= f.text_field :mood, :placeholder => 'What is your mood?' %><br><br>
