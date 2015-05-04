@@ -1,7 +1,9 @@
-<%= form_for(@workout) do |f| %>
-  <span class="form-labels">Area Worked Out: </span><%= f.text_area :area_worked_out %><br>
-  Workout Length: <%= f.text_area :workout_length %><br>
-  Mood: <%= f.text_area :mood %><br>
-  Notes: <%= f.text_area :notes %>
-  <%= f.submit %>
-<% end %>
+<span class="form">
+  <%= form_for(@workout) do |f| %>
+    <%= f.text_field :area_worked_out, :placeholder => 'Area Worked Out' %><br><br>
+    <%= f.text_field :workout_length, :placeholder => 'Length of Workout' %><br><br>
+    <%= f.text_field :mood, :placeholder => 'What is your mood?' %><br><br>
+    <%= f.text_area :notes, :placeholder => 'Add notes about the workout...' %><br><br>
+    <%= f.submit %>
+  <% end %>
+</span>
