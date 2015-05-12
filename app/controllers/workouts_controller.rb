@@ -22,7 +22,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
     if @workout.save
        flash[:success] = "Workout was successfully created"
-      redirect_to root_path
+      redirect_to :back
     else
       render 'new'
     end
