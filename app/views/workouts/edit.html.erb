@@ -1,5 +1,11 @@
 <h1 class="make-white">Edit Workout:</h1>
-<%= render 'form' %>
+   <%= form_for(@workout) do |f| %>
+      <%= f.text_field :area_worked_out, :placeholder => 'Area Worked Out' %><br><br>
+      <%= f.text_field :workout_length, :placeholder => 'Length of Workout' %><br><br>
+      <%= f.text_field :mood, :placeholder => 'What is your mood?' %><br><br>
+      <%= f.text_area :notes, :placeholder => 'Add notes about the workout...' %><br><br>
+      <%= f.submit "Save changes" %>
+    <% end %>
 
 <br><br>
 <%= link_to 'Cancel', @workout %>

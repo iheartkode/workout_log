@@ -30,15 +30,21 @@ class WorkoutsController < ApplicationController
 
   #The action that grabs the workout and show the edit view
   def edit
-    @workout = Workout.find(params[:id])
+     @workout = Workout.find(params[:id])
   end
 
   #The action that takes the parameters and updates it in the db
   def update
-    @workout = Workout.find(params[:id])
-    @workout.update(workout_params)
-     flash[:success] = "Workout was successfully updated"
-    redirect_to root_path
+    if @workout.update(workout_params)
+      redirect_to @workout
+      flash[:success] = "Workout was successfully updated"
+    else
+      render 'edit'
+    end
+    # @workout = Workout.find(params[:id])
+    # @workout.update(workout_params)
+    #  flash[:success] = "Workout was successfully updated"
+    # redirect_to root_path
   end
 
   #Destroys the workout when you click delete

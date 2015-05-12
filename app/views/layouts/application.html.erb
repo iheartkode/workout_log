@@ -12,11 +12,11 @@
   </header>
   <div class="container">
     <div class="content">
-      <span id="new-workout" class="new-workout"><%= link_to 'New Workout', '#' %></span>
-      <div id="new">
+      <span id="new-workout" class="new-workout"><%= link_to 'New Workout', new_workout_path %></span>
+      <!-- <div id="new">
         <%= render 'form' %><br>
         <%= link_to 'Cancel', root_path %>
-      </div>
+      </div> -->
       <br><br>
       <% flash.each do |key, value| %>
         <div class="alert"<%= key %>"><%= value %></div>
