@@ -1,15 +1,20 @@
 <% if @workouts_all_length == 0 %>
+
 <% else %>
-<p class="total-time">
-  Total Workout Time: <br>
-   <span class="time">
-     <%=  distance_of_time_in_words(@workouts_all_length * 60) %>
+  <p class="total-time">
+    Total Workout Time: <br>
+    <span class="time">
+      <%=  distance_of_time_in_words(@workouts_all_length * 60) %>
     </span>
-</p>
+  </p>
 <% end %>
 <br>
 
-<% @workouts.each do |workout| %>
-  <p class="workout-date"><%= link_to workout.created_at.strftime("%B %d, %Y"), workout %></p>
-  <span class="area-worked-out">Workout:</span> <span class="workout"><%= workout.area_worked_out %></span>
+<% if @workouts.blank? %>
+  No workouts found, maybe you should <%= link_to "workout?", new_workout_path %> <br>
+<% else %>
+  <% @workouts.each do |workout| %>
+    <p class="workout-date"><%= link_to workout.created_at.strftime("%B %d, %Y"), workout %></p>
+    <span class="area-worked-out">Workout:</span> <span class="workout"><%= workout.area_worked_out %></span>
+  <% end %>
 <% end %>
