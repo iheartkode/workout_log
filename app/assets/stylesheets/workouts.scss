@@ -49,6 +49,16 @@ header h1 {
 }
 
 // Link Styles
+header a:link {
+  color: #333;
+}
+header a:hover {
+  text-decoration: none;
+}
+header a:visited {
+  color:#333;
+}
+
 a:link {
   color: white;
   text-decoration: none;

@@ -9,7 +9,6 @@ class WorkoutsController < ApplicationController
 
   #The action that shows the workout
   def show
-
   end
 
   #The action that creates a new workout and directs to the new view

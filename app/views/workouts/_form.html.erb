@@ -1,10 +1,10 @@
 <br>
 <span class="form">
   <%= form_for Workout.new do |f| %>
-    <%= f.text_field :area_worked_out, :placeholder => 'Area Worked Out' %><br><br>
-    <%= f.text_field :workout_length, :placeholder => 'Length of Workout' %><br><br>
-    <%= f.text_field :mood, :placeholder => 'What is your mood?' %><br><br>
-    <%= f.text_area :notes, :placeholder => 'Add notes about the workout...' %><br><br>
+    <%= f.text_field :area_worked_out, :placeholder => 'What area did you workout?' %><br><br>
+    <%= f.text_field :workout_length, :placeholder => 'Workout Length?' %><br><br>
+    <%= f.text_field :mood, :placeholder => 'Current Mood?' %><br><br>
+    <%= f.text_area :notes, :placeholder => 'Add notes about your workout...' %><br><br>
     <%= f.submit %>
   <% end %>
 </span>
