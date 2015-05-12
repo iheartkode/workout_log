@@ -1,3 +1,11 @@
+<% if @workouts_all_length == 0 %>
+<% else %>
+<p class="total-time">
+  Total Time Worked Out: <%=  distance_of_time_in_words(@workouts_all_length * 60) %>
+</p>
+<% end %>
+<br>
+
 <% @workouts.each do |workout| %>
   <p class="workout-date"><%= link_to workout.created_at.strftime("%B %d, %Y"), workout %></p>
   <span class="area-worked-out">Workout:</span> <span class="workout"><%= workout.area_worked_out %></span>

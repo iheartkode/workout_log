@@ -5,6 +5,7 @@ class WorkoutsController < ApplicationController
   #Get all workouts created_at dates descending
   def index
     @workouts = Workout.all.order("created_at desc")
+    @workouts_all_length = Workout.sum(:workout_length)
   end
 
   #The action that shows the workout
