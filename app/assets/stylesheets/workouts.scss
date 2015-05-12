@@ -34,11 +34,16 @@ header h1 {
   font-family: 'Raleway', sans-serif;
 }
 
-.total-time {
+.time {
   color: white;
+  font-size: 30px;
+  margin-left: 20px;
+}
+.total-time {
+  color: #ddd;
   margin-top: -50px;
-  margin-left: 60%;
-  font-size: 18px;
+  margin-left: 45%;
+  font-size: 20px;
 }
 
 // Styles the new button on the layout
