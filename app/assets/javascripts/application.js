@@ -14,8 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$( document ).ready(function() {
-    $('#new-workout').on( "click", function() {
-      $('#new').fadeIn(1000);
-    });
-});
+
+// TODO: need to figure out why the unbind is not working
+// $( document ).ready(function() {
+//     $('#new-workout').on( "click", function() {
+//       $('#new').fadeIn(1000);
+//     });
+//     $('#new-workout').unbind();
+// });
