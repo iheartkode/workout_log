@@ -1,9 +1,26 @@
-<h1 class="make-white"><%= @workout.created_at.strftime("%B %d, %Y") %></h1>
-<span class="blue">Area Worked Out:</span> <%= @workout.area_worked_out %><br><br>
-<span class="blue">Workout Length:</span> <%= @workout.workout_length %><br><br>
-<span class="blue">Workout Mood:</span> <%= @workout.mood %><br><br>
-  <span class="blue">Workout Notes:</span> <%= @workout.notes %><br><br>
-  <%= link_to 'Edit', edit_workout_path %>
+<h1 class="make-white">
+  <%= @workout.created_at.strftime("%B %d, %Y") %>
+</h1>
+
+<span class="blue">
+  Area Worked Out:
+</span>
+  <%= @workout.area_worked_out %><br><br>
+<span class="blue">
+  Workout Length:
+</span>
+  <%= @workout.workout_length %><br><br>
+<span class="blue">
+  Workout Mood:
+</span>
+  <%= @workout.mood %><br><br>
+<span class="blue">
+  Workout Notes:
+</span>
+  <%= @workout.notes %><br><br>
+
+<%= link_to 'Edit', edit_workout_path %>
+
 <%= link_to "Delete",  workout_path(@workout) , method:  :delete, data: { confirm: "Are you sure?" }%>
 <br><br>
 <%= link_to 'Back to Workout List', root_path %>

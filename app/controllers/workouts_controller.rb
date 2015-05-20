@@ -41,10 +41,6 @@ class WorkoutsController < ApplicationController
     else
       render 'edit'
     end
-    # @workout = Workout.find(params[:id])
-    # @workout.update(workout_params)
-    #  flash[:success] = "Workout was successfully updated"
-    # redirect_to root_path
   end
 
   #Destroys the workout when you click delete

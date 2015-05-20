@@ -8,12 +8,15 @@
 </head>
 <body>
   <header>
-    <h1><%= link_to "Workout Log", root_path%> <span class="blue">by @iheartkode</span>
-
+    <h1>
+      <%= link_to "Workout Log", root_path%>
+      <span class="blue">by @iheartkode
+      </span>
     </h1>
-
   </header>
+  <!-- Begin Container -->
   <div class="container">
+    <!-- Begin Content -->
     <div class="content">
       <span id="new-workout" class="new-workout"><%= link_to 'New Workout', new_workout_path %></span>
       <!-- Feature to be added -->
@@ -22,11 +25,12 @@
         <%= link_to 'Cancel', root_path %>
       </div> -->
       <br><br>
+      <!-- Flash notices -->
       <% flash.each do |key, value| %>
         <div class="alert"<%= key %>"><%= value %></div>
       <% end %>
       <%= yield %>
-    </div>
-  </div>
+    </div> <!-- end content -->
+  </div> <!-- end Container -->
 </body>
 </html>
