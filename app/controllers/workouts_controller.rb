@@ -8,6 +8,7 @@ class WorkoutsController < ApplicationController
     @workouts_all_length = Workout.where(user_id: current_user).sum(:workout_length)
   end
 
+
   #The action that shows the workout
   def show
   end
