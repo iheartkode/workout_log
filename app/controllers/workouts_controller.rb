@@ -1,11 +1,11 @@
 class WorkoutsController < ApplicationController
-
+  before_filter :authenticate_user!
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   #Get all workouts created_at dates descending
   def index
-    @workouts = Workout.all.order("created_at desc")
-    @workouts_all_length = Workout.sum(:workout_length)
+    @workouts = Workout.where(user_id: current_user).order("created_at desc")
+    @workouts_all_length = Workout.where(user_id: current_user).sum(:workout_length)
   end
 
   #The action that shows the workout
@@ -14,12 +14,12 @@ class WorkoutsController < ApplicationController
 
   #The action that creates a new workout and directs to the new view
   def new
-    @workout = Workout.new
+    @workout = current_user.workouts.build
   end
 
   #The action that actually saves the workout
   def create
-    @workout = Workout.new(workout_params)
+    @workout = current_user.workouts.build(workout_params)
     if @workout.save
        flash[:success] = "Workout was successfully created"
       redirect_to root_path
