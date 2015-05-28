@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+  
   before_filter :authenticate_user!
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
@@ -22,7 +23,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = current_user.workouts.build(workout_params)
     if @workout.save
-       flash[:success] = "Workout was successfully created"
+       flash[:notice] = "Workout was successfully created"
       redirect_to root_path
     else
       render 'new'
@@ -38,7 +39,7 @@ class WorkoutsController < ApplicationController
   def update
     if @workout.update(workout_params)
       redirect_to @workout
-      flash[:success] = "Workout was successfully updated"
+      flash[:notice] = "Workout was successfully updated"
     else
       render 'edit'
     end
@@ -47,7 +48,7 @@ class WorkoutsController < ApplicationController
   #Destroys the workout when you click delete
   def destroy
     @workout.destroy
-    flash[:success] = "Workout was successfully deleted"
+    flash[:notice] = "Workout was successfully deleted"
     redirect_to root_path
   end
 
