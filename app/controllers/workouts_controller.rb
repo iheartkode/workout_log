@@ -1,11 +1,11 @@
 class WorkoutsController < ApplicationController
-  
+
   before_filter :authenticate_user!
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   #Get all workouts created_at dates descending
   def index
-    @workouts = Workout.where(user_id: current_user).order("created_at desc")
+    @workouts = Workout.where(user_id: current_user).order("created_at desc").paginate(:page => params[:page], :per_page => 10)
     @workouts_all_length = Workout.where(user_id: current_user).sum(:workout_length)
   end
 
