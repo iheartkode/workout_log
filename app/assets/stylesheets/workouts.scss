@@ -39,10 +39,11 @@ header h1 {
 }
 
 .time {
-  color: white;
+  color: #3BD5F7;
   font-size: 30px;
   margin-left: 5px;
 }
+
 .total-time {
   color: #ddd;
   margin-top: -50px;
@@ -68,9 +69,11 @@ header h1 {
 header a:link {
   color: #333;
 }
+
 header a:hover {
   text-decoration: none;
 }
+
 header a:visited {
   color:#333;
 }

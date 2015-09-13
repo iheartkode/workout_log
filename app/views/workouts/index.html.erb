@@ -11,7 +11,7 @@
 <br>
 
 <% if @workouts.blank? %>
-  No workouts found, maybe you should workout?
+  No workouts found, maybe you should <%= link_to 'workout?', new_workout_path %>
   <br>
 <% else %>
     <% @workouts.each do |workout| %>

@@ -2,7 +2,7 @@
 <span class="form">
   <%= form_for Workout.new do |f| %>
     <%= f.text_field :area_worked_out, :size=>"25",  :placeholder => 'What area did you workout?', :required => true %><br><br>
-    <%= f.text_field :workout_length, :size=>"25",  :placeholder => 'Workout Length in Minutes?', :required => true %><br><br>
+    <%= f.text_field :workout_length, :size=>"25",  :placeholder => 'Workout Length in Minutes?', :type=>"number", :required => true %><br><br>
     <%= f.text_field :mood, :size=>"25", :placeholder => 'Current Mood?' %><br><br>
     <%= f.text_area :notes, :size=>"28", :placeholder => 'Add notes about your workout...' %><br><br>
     <%= f.submit %>
